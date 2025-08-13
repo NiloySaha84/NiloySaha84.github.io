@@ -1,0 +1,119 @@
+#sec-1 {
+    clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 30px),
+    90% 100%,
+    80% calc(100% - 30px),
+    70% 100%,
+    60% calc(100% - 30px),
+    50% 100%,
+    40% calc(100% - 30px),
+    30% 100%,
+    20% calc(100% - 30px),
+    10% 100%,
+    0 calc(100% - 30px)
+  );
+    
+}
+
+.navbar-brand {
+    padding-left: 5%;
+}
+
+#navbarNavAltMarkup {
+    padding-right: 5%;
+}
+
+.navbar-nav .nav-link:not(:first-child) {
+    margin-left: 1.5rem; 
+  }
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+#my-pic {
+    padding-top: 2%;
+    
+}
+
+#des-abt-me {
+    padding-top: 2%;
+}
+
+#top-btn {
+    display: flex; gap: 70px;
+    justify-content: center;
+    padding-top: 4%;
+}
+
+#social-btn {
+    display: flex; gap: 20px;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding-top: 5%;
+    padding-bottom: 100px;
+}
+
+.fa-brands {
+    font-size: 30px;
+}
+
+#abt-me {
+    display: flex; gap: 70px;
+    justify-content: center;
+    padding-top: 2%;
+    
+
+}
+
+#education {
+    display: flex; gap: 110px;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+#skills {
+    padding-top: 10%;
+    
+}
+
+#skillList {
+    padding: 30px;
+    padding-top: 5%;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+#project {
+    padding-top: 2%;
+}
+
+#projectList {
+    height: 100%;
+}
+
+#contact {
+    justify-content: center;
+    background-color: #e9ecef;
+    clip-path: polygon(
+        0 30px,
+        10% 0,
+        20% 30px,
+        30% 0,
+        40% 30px,
+        50% 0,
+        60% 30px,
+        70% 0,
+        80% 30px,
+        90% 0,
+        100% 30px,
+        100% 100%,
+        0 100%
+    );
+}
+
+
