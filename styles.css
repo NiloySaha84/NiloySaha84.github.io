@@ -96,6 +96,12 @@ body {
     height: 100%;
 }
 
+.project-card img {
+    height: 400px; 
+    object-fit: cover;
+    border-radius: 8px; 
+}
+
 #contact {
     justify-content: center;
     background-color: #e9ecef;
