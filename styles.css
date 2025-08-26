@@ -140,6 +140,16 @@ body {
     }
 }
 
+.github-link {
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+  }
+  .github-link:hover {
+    color: black; /* darker on hover */
+    text-decoration: underline;
+  }
+
 .project-card  {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
