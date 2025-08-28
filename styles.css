@@ -14,15 +14,24 @@
     10% 100%,
     0 calc(100% - 30px)
   );
-    
+    background-color: #1f2937;
 }
 
 .bg {
-    background-color: #f8f9fa;
+    background-color: #1a1f29;
 }
 
-.navbar-brand {
-    padding-left: 5%;
+.navbar {
+    background-color: #1f2937 !important;
+}
+
+.navbar-brand, .nav-link {
+    color: #f0f6fc !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #58a6ff !important;
 }
 
 #navbarNavAltMarkup {
@@ -53,21 +62,21 @@ body {
 }
 
 #social-btn {
-    display: flex; gap: 20px;
+    display: flex; gap: 10px;
     justify-content: center;
     flex-wrap: nowrap;
     padding-top: 50px;
     padding-bottom: 100px;
 }
 
-.fa-brands {
-    font-size: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.s-btn {
+  font-size: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.fa-brands:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+.s-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 #abt-me {
@@ -104,6 +113,15 @@ body {
     gap: 120px; /* spacing between skills */
     min-width: 300%; /* because we have 3 copies */
     animation: marquee-left 30s linear infinite;
+    color:#e9ecef;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .marquee-content span:hover {
+    transform: scale(1.2);
+    color: #58a6ff;
+    text-shadow: 0 0 10px rgba(88,166,255,0.6);
   }
   
   @keyframes marquee-left {
@@ -132,6 +150,19 @@ body {
     height: 100%;
 }
 
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #1f2937;
+    color: #f0f6fc;
+    border: none;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  .project-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(88, 166, 255, 0.4); 
+  }
+
 .project-card img {
     height: 400px; 
     object-fit: fill;
@@ -140,7 +171,7 @@ body {
 
 #contact {
     justify-content: center;
-    background-color: #e9ecef;
+    background-color: #1f2937;
     clip-path: polygon(
         0 30px,
         10% 0,
@@ -167,31 +198,44 @@ body {
 .card-edu {
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+    background-color: #1f2937;
+    color: #f0f6fc;
+    border: none;
 }
 
 .card-edu:hover {
     transform: scale(1.02);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 20px rgba(88, 166, 255, 0.4);
 }
 
 .github-link {
-    color: gray;
+    color: #58a6ff;
     text-decoration: none;
     transition: color 0.3s ease, text-decoration 0.3s ease;
   }
   .github-link:hover {
-    color: black; /* darker on hover */
+    color: #79c0ff; /* lighter blue on hover */
     text-decoration: underline;
   }
 
-.project-card  {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  h6 a {
+    color: gray;
+    text-decoration: none;
+    transition: color 0.3s ease;
   }
   
-  .project-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+  h6 a:hover {
+    color: #58a6ff;
   }
 
+  #contact a {
+    color: #f8f9fa;
+    transition: color 0.3s ease;
+  }
 
+  #contact a:hover {
+    color:#58a6ff;
+  }
+
+  
