@@ -46,10 +46,10 @@
         </div>
 
         <div id="top-btn" class="d-flex justify-content-center gap-3">
-            <a href="NiloySaha Resume.pdf" download class="btn btn-outline-secondary btn-lg text-center" style="width: 200px;">
+            <a href="NiloySaha Resume.pdf" download class="btn btn-outline-secondary btn-lg text-center" style="width: 200px; color: #e9ecef; border-radius: 0.5rem; font-weight: 500; border-width: 2px;">
                 Download CV
             </a>
-            <a href="#contact" class="btn btn-outline-secondary btn-lg text-center" style="width: 200px;">
+            <a href="#contact" class="btn btn-outline-secondary btn-lg text-center" style="width: 200px; color: #e9ecef; border-radius: 0.5rem; font-weight: 500; border-width: 2px;">
                 Contact Me
             </a>
         </div>
@@ -400,50 +400,62 @@
             </div>
           </div>
         
-        <div id="project" class="container" data-aos="fade-in">
+        <div id="project" class="container" data-aos="fade-up" style="padding-top: 100px;">
             <p class="text-center mb-4" style="text-align: center;"><h1 style="color: #e9ecef;">Projects</h1><i style="color: grey;">A snippet of what I've built</i><br><i style="font-size: small; color:grey;">Visit my <a href="https://github.com/NiloySaha84" target="_blank" class="github-link">GitHub</a> to explore all my projects</i></p>
-            <div class="row g-4">
-                <div class="col-md-3 col-lg-3" data-aos="fade-up">
-                    <div class="card project-card w-100 h-100" id="proj1" style="background-color: #1f2937; color: #e9ecef; border: none;">
-                        <img src="images/ai summarizer.png" class="card-img-top w-100 img-fluid" alt="AI Summarizer">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">QuickGist Chrome Extension</h5>
-                            <p class="card-text flex-grow-1">A browser extension that instantly condenses articles and YouTube videos using the OpenAI API. Features a clean, responsive interface, real-time content extraction, and a scalable backend optimized for speed, cost-efficiency, and improved summary relevance.</p>
-                            <a href="https://github.com/NiloySaha84/AI-Summarizer-Chrome-Extension" class="btn btn-secondary mt-auto">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-lg-3" data-aos="fade-up">
-                    <div class="card project-card w-100 h-100"  id="proj2" style="background-color: #1f2937; color: #e9ecef; border: none;">
-                        <img src="images/pass-manager.png" class="card-img-top w-100 img-fluid" alt="Password Manager">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Password Manager</h5>
-                            <p class="card-text flex-grow-1">A secure password manager that stores encrypted credentials locally, with features like search, copy-to-clipboard, and auto-save using a clean, user-friendly interface.</p>
-                            <a href="https://github.com/NiloySaha84/Password-Manager-App" class="btn btn-secondary mt-auto">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 col-lg-3" data-aos="fade-up">
-                    <div class="card project-card w-100 h-100" id="proj1" style="background-color: #1f2937; color: #e9ecef; border: none;">
-                        <img src="images/Screenshot 2025-08-24 at 9.03.51 PM.png" class="card-img-top w-100 img-fluid" alt="AI Summarizer">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">CourseCrafter AI</h5>
-                            <p class="card-text flex-grow-1">A full-stack web app that generates structured learning courses from user-provided topics. Uses the OpenAI API to create course outlines and lessons, and integrates the YouTube Data API to recommend supporting video resources. Built with Node.js, Express, EJS, and Bootstrap for a responsive, accessible experience.</p>
-                            <a href="https://github.com/NiloySaha84/Ai-Course-Builder" class="btn btn-secondary mt-auto">GitHub</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 
-                <div class="col-md-3 col-lg-3" data-aos="fade-up">
-                  <div class="card project-card w-100 h-100"  id="proj2" style="background-color: #1f2937; color: #e9ecef; border: none;">
-                      <img src="images/Screenshot 2025-08-29 at 11.11.33 PM.png" class="card-img-top w-100 img-fluid" alt="Password Manager">
-                      <div class="card-body d-flex flex-column">
-                          <h5 class="card-title">Credit Card Fraudeulent Predictor</h5>
-                          <p class="card-text flex-grow-1">A machine learning model that analyzes 50,000+ credit card transactions to detect fraudulent activity, using data preprocessing, feature engineering, and SMOTE balancing to improve accuracy and reliability.</p>
-                          <a href="https://github.com/NiloySaha84/Credit_Card-fraud-detector" class="btn btn-secondary mt-auto">GitHub</a>
-                      </div>
+              <div class="col" >
+                <div class="card h-100 border-0 project-card" style="background-color: #1f2937; color: #e9ecef;">
+                  <div class="project-img-container">
+                    <img src="images/ai summarizer.png" class="card-img-top" alt="AI Summarizer">
                   </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">QuickGist Chrome Extension</h5>
+                    <p class="card-text flex-grow-1">A browser extension that instantly condenses articles and YouTube videos using the OpenAI API. Features a clean, responsive interface, real-time content extraction, and a scalable backend optimized for speed, cost-efficiency, and improved summary relevance.</p>
+                    <a href="https://github.com/NiloySaha84/AI-Summarizer-Chrome-Extension" class="btn btn-outline-secondary mt-auto" style="color: #e9ecef;">View on GitHub</a>
+                  </div>
+                </div>
               </div>
+
+              <div class="col">
+                <div class="card h-100 border-0 project-card" style="background-color: #1f2937; color: #e9ecef;">
+                  <div class="project-img-container">
+                    <img src="images/pass-manager.png" class="card-img-top" alt="Password Manager">
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Password Manager</h5>
+                    <p class="card-text flex-grow-1">A secure password manager that stores encrypted credentials locally, with features like search, copy-to-clipboard, and auto-save using a clean, user-friendly interface.</p>
+                    <a href="https://github.com/NiloySaha84/Password-Manager-App" class="btn btn-outline-secondary mt-auto" style="color: #e9ecef;">View on GitHub</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100 border-0 project-card" style="background-color: #1f2937; color: #e9ecef;">
+                  <div class="project-img-container">
+                    <img src="images/Screenshot 2025-08-24 at 9.03.51 PM.png" class="card-img-top" alt="CourseCrafter AI">
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">CourseCrafter AI</h5>
+                    <p class="card-text flex-grow-1">A full-stack web app that generates structured learning courses from user-provided topics. Uses the OpenAI API to create course outlines and lessons, and integrates the YouTube Data API to recommend supporting video resources. Built with Node.js, Express, EJS, and Bootstrap for a responsive, accessible experience.</p>
+                    <a href="https://github.com/NiloySaha84/Ai-Course-Builder" class="btn btn-outline-secondary mt-auto" style="color: #e9ecef;">View on GitHub</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card h-100 border-0 project-card" style="background-color: #1f2937; color: #e9ecef;">
+                  <div class="project-img-container">
+                    <img src="images/Screenshot 2025-08-29 at 11.11.33 PM.png" class="card-img-top" alt="Credit Card Fraudulent Predictor">
+                  </div>
+                  <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Credit Card Fraudulent Predictor</h5>
+                    <p class="card-text flex-grow-1">A machine learning model that analyzes 50,000+ credit card transactions to detect fraudulent activity, using data preprocessing, feature engineering, and SMOTE balancing to improve accuracy and reliability.</p>
+                    <a href="https://github.com/NiloySaha84/Credit_Card-fraud-detector" class="btn btn-outline-secondary mt-auto" style="color: #e9ecef;">View on GitHub</a>
+                  </div>
+                </div>
+              </div>
+
             </div>
         </div>
 
@@ -458,7 +470,7 @@
                         </p>
                         <p>
                             <i class="fa-brands fa-linkedin fa-lg me-2 text-light"></i>
-                            <a href="http://www.linkedin.com/in/niloysaha35" target="_blank" class="text-decoration-none">linkedin.com/in/niloysaha</a>
+                            <a href="http://www.linkedin.com/in/niloysaha35" target="_blank" class="text-decoration-none">linkedin.com/in/niloysaha35</a>
                         </p>
                     </div>
                 </div>

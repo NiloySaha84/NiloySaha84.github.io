@@ -67,6 +67,7 @@ body {
     display: flex; gap: 70px;
     justify-content: center;
     padding-top: 40px;
+    
 }
 
 #social-btn {
@@ -150,32 +151,34 @@ body {
   
   
 
-#project {
-    padding-top: 100px;
-}
-
-#projectList {
-    height: 100%;
-}
-
-.project-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #1f2937;
-    color: #f0f6fc;
-    border: none;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  .project-card .card-img-top {
+    transition: transform 0.35s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+    object-fit: cover;
+    height: 220px;
+    border-radius: 0.7rem 0.7rem 0 0;
+    background: #222;
   }
-  
-  .project-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 20px rgba(88, 166, 255, 0.4); 
+  .project-img-container {
+    overflow: hidden;
+    border-radius: 0.7rem 0.7rem 0 0;
   }
-
-.project-card img {
-    height: 400px; 
-    object-fit: fill;
-    border-radius: 8px; 
-}
+  .project-card {
+    background: #1f2937;
+    color: #e9ecef;
+    border-radius: 0.7rem;
+    transition: box-shadow 0.3s, transform 0.3s ease;
+  }
+  .project-card:hover,
+  .project-card:focus-within {
+    box-shadow: 0 8px 32px rgba(88,166,255,0.18), 0 2px 8px rgba(0,0,0,0.18);
+    transform: scale(1.03);
+  }
+  .project-card .btn-outline-secondary {
+    border-width: 2px;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
 
 #contact {
     justify-content: center;
