@@ -1,496 +1,408 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Niloy Saha | Projects & Skills Showcase</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/046667c452.js" crossorigin="anonymous"></script>
-        
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <body class="bg">
-    <div id="sec-1">
-        <div id="navbar">
-            <nav class="navbar navbar-expand-lg" style="background-color: #e9ecef;">
-                <div class="container-fluid">
-                  <a class="navbar-brand ps-3 ps-md-5" href="index.html">Niloy Saha</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ms-auto">
-                      <a class="nav-link" aria-current="page" href="#abt-me">About Me</a>
-                      <a class="nav-link" href="#experience">Experience</a>
-                      <a class="nav-link" href="#skills">Skills</a>
-                      <a class="nav-link" href="#project">Projects</a>
-                      <a class="nav-link" href="#contact">Contact</a>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Niloy Saha | Projects & Skills Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Niloy Saha</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Hi, I'm Niloy Saha</h1>
+            <p class="subtitle">Aspiring Software Engineer | Computer Science Student</p>
+            <div class="hero-buttons">
+                <a href="NiloySaha Resume.pdf" class="btn btn-primary">My Resume</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="mypic.PNG" alt="Niloy Saha">
+            </div>
+            <div class="about-text">
+                <h3>Passionate about creating innovative solutions</h3>
+                <p>I am a dedicated Computer Science student with a strong passion for software development and problem-solving. Pursuing my Bachelor's degree in Computer Science, I am focused on developing a solid foundation in programming, algorithms, and software engineering principles to design efficient and innovative solutions.</p>  
+                <p>My journey in tech began with curiosity about how things work, and has evolved into a commitment to creating meaningful applications that make a difference. I enjoy tackling challenging problems and continuously learning new technologies.</p>
+                <div class="about-info">
+                    <div class="info-item">
+                        <strong>Location:</strong> <span>New York, USA</span>
                     </div>
-                  </div>
-                </div>
-              </nav>
-        </div>
-
-        <div id="my-pic">
-            <img src="images/profile 3.png" class="rounded-circle mx-auto d-block w-25 img-fluid" alt="..." style="box-shadow: 0 8px 20px rgba(88, 166, 255, 0.4)">
-        </div>
-
-        <div id="des-abt-me">
-            <h1 class="text-center" style="color: #e9ecef;">Niloy Saha</h1>
-            <h4 class="text-center" style="padding-left: 8%; padding-right: 8%; padding-top: 2%; color: #e9ecef;">Undergraduate Computer Science Student | Specializing in Software Engineering | Eager to apply academic learnings in a real-world setting</h4>
-        </div>
-
-        <div id="top-btn" class="d-flex justify-content-center gap-3">
-            <a href="NiloySaha Resume.pdf" download class="btn btn-outline-secondary btn-lg text-center" style="width: 200px; color: #e9ecef; border-radius: 0.5rem; font-weight: 500; border-width: 2px;">
-                Download CV
-            </a>
-            <a href="#contact" class="btn btn-outline-secondary btn-lg text-center" style="width: 200px; color: #e9ecef; border-radius: 0.5rem; font-weight: 500; border-width: 2px;">
-                Contact Me
-            </a>
-        </div>
-
-        <div id="social-btn">
-          <a href="http://www.linkedin.com/in/niloysaha35" target="_blank" class="text-decoration-none text-light">
-            <i class="fa-brands fa-linkedin text-light s-btn"></i>
-          </a>
-        
-          <a href="https://github.com/NiloySaha84" target="_blank" class="text-decoration-none text-light">
-            <i class="fa-brands fa-github text-light s-btn"></i>
-          </a>
-        </div>
-
-    </div>
-
-        <div id="abt-me" class="container" data-aos="fade-right">
-            <div class="row">
-                <div class="col-md-6 d-flex flex-column">
-                  <h1 style="color: #e9ecef;">About Me</h1>
-                  <p style="padding-top: 10px; color: #e9ecef;">
-                    I am a dynamic and motivated bachelor's student passionate about technology and software development. I enjoy applying my academic knowledge to real-world projects and continuously developing my technical and problem-solving skills. I thrive in collaborative environments and love learning new technologies. With a strong foundation in computer science and a keen interest in software engineering, I am committed to contributing effectively while growing both personally and professionally.
-                  </p>
-                  <p style="padding-top: 10px; color: #e9ecef;">Over the course of my academic journey, I have engaged in various projects that allowed me to explore different areas of programming, web development, and application design. I take pride in approaching challenges with creativity and analytical thinking, ensuring that my solutions are both efficient and user-friendly. Beyond technical expertise, I value clear communication and teamwork, as I believe they are essential for delivering impactful results. My adaptability and eagerness to learn enable me to quickly grasp new tools, frameworks, and concepts, making me a versatile contributor in any setting.</p>
-                </div>
-                <div class="col-md-6">
-                    <img src="images/githubProfilePic.png" class="rounded-square mx-auto d-block w-75 img-fluid" alt="...">
-                </div>
-              </div>
-        </div>
-
-        <div id="education" class="container" data-aos="fade-left">
-            <div class="row">
-                <div class="col-md-6">
-                    <img src="images/hofstra-university-logo.png" class="rounded-square mx-auto d-block w-50 img-fluid" alt="...">
-                </div>
-                <div class="col-md-6 d-flex flex-column">
-                    <h1 style="color: #e9ecef;">Education</h1>
-                    <h4 style="padding-top: 20px; color: #e9ecef;">Hofstra University</h4>
-                    <h6 style="color: #e9ecef;">2023-2027</h6>
-                    <h6 style="color: #e9ecef;">Bachelor of Science, Computer Science</h6>
-                    <h6 style="padding-top: 10px; color: #e9ecef;">Related Courseworks: <i>Computing in Python, Advanced Data Structures, Algorithms and OOP, Software Engineering,
-                        Discrete Structures & Mathematics, Computer Operating Systems, Foundations of NLP & Text Mining</i></h6>
-                    <h6 style="padding-top: 10px; color: #e9ecef;">Honors & Awards: Dean’s List, President Scholarship</h6>
-                    <h6 style="padding-top: 10px; color: #e9ecef;">Activities & Involvement: Code Club <a href="https://hofstra.campuslabs.com/engage/organization/hofcode">(HOFSTRA C.O.D.E)</a>, Weekly Hackathons and Coding Competitions, Worked as an RSR (Resident Success Representative), and Currently Working as an Student IT Technician for the Law School</h6>
-                </div>
-            </div>
-        </div>
-
-        <div id="experience" class="container my-5" data-aos="fade-up" style="padding-top: 100px;">
-          <p class="text-center mb-4" style="text-align: center;"><h1 style="text-align: center; color: #e9ecef;">Experience</h1><i style="color: grey; text-align: center; padding-bottom: 20px;">A glimpse into my professional journey till now</i></p>
-        
-          <div class="timeline">
-            <!-- Newest job (top) -->
-            <div class="timeline-item left">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <h3>Student IT Technician</h3>
-                <p style="color: gray;"><i class="fa-solid fa-location-dot" style="color:white; padding-right: 10px;"></i>Maurice A. Deane School of Law at Hofstra University</p>
-                <span>Sept 2025 - Present</span>
-              </div>
-            </div>
-          
-            <!-- Mid job -->
-            <div class="timeline-item right">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <h3>Resident Success Representative</h3>
-                <p style="color: gray;"><i class="fa-solid fa-location-dot" style="color:white; padding-right: 10px;"></i>Hofstra University</p>
-                <span>Jan 2025 - Apr 2025</span>
-              </div>
-            </div>
-          
-            
-          
-            
-          </div>
-            </div>
-        
-          </div>
-        </div>
-
-          <div id="skills" class="skills-section">
-            <p class="text-center mb-4" style="text-align: center;"><h1 style="text-align: center; color: #e9ecef;">My Skills</h1><i style="color: grey; text-align: center; padding-bottom: 20px;">A snaphot of my skill set</i></p>
-          
-            <!-- Programming Languages -->
-            <div class="skills-row">
-              <div class="marquee-content">
-                <span>Java</span>
-                <span>Python</span>
-                <span>C++</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Dart</span>
-
-                <span>Java</span>
-                <span>Python</span>
-                <span>C++</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Dart</span>
-
-                <span>Java</span>
-                <span>Python</span>
-                <span>C++</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Dart</span>
-
-                <span>Java</span>
-                <span>Python</span>
-                <span>C++</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Dart</span>
-
-                <span>Java</span>
-                <span>Python</span>
-                <span>C++</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Dart</span>
-
-                <span>Java</span>
-                <span>Python</span>
-                <span>C++</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Dart</span>
-
-                <span>Java</span>
-                <span>Python</span>
-                <span>C++</span>
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>Dart</span>
-              </div>
-            </div>
-          
-            <!-- Frameworks & Libraries -->
-            <div class="skills-row">
-              <div class="marquee-content">
-                <span>React.js</span>
-                <span>Node.js</span>
-                <span>Express.js</span>
-                <span>Flask</span>
-                <span>Django</span>
-                <span>EJS</span>
-                <span>Jinja</span>
-                <span>jQuery</span>
-
-                <span>React.js</span>
-                <span>Node.js</span>
-                <span>Express.js</span>
-                <span>Flask</span>
-                <span>Django</span>
-                <span>EJS</span>
-                <span>Jinja</span>
-                <span>jQuery</span>
-
-                <span>React.js</span>
-                <span>Node.js</span>
-                <span>Express.js</span>
-                <span>Flask</span>
-                <span>Django</span>
-                <span>EJS</span>
-                <span>Jinja</span>
-                <span>jQuery</span>
-
-                <span>React.js</span>
-                <span>Node.js</span>
-                <span>Express.js</span>
-                <span>Flask</span>
-                <span>Django</span>
-                <span>EJS</span>
-                <span>Jinja</span>
-                <span>jQuery</span>
-
-                <span>React.js</span>
-                <span>Node.js</span>
-                <span>Express.js</span>
-                <span>Flask</span>
-                <span>Django</span>
-                <span>EJS</span>
-                <span>Jinja</span>
-                <span>jQuery</span>
-
-                <span>React.js</span>
-                <span>Node.js</span>
-                <span>Express.js</span>
-                <span>Flask</span>
-                <span>Django</span>
-                <span>EJS</span>
-                <span>Jinja</span>
-                <span>jQuery</span>
-
-                <span>React.js</span>
-                <span>Node.js</span>
-                <span>Express.js</span>
-                <span>Flask</span>
-                <span>Django</span>
-                <span>EJS</span>
-                <span>Jinja</span>
-                <span>jQuery</span>
-              </div>
-            </div>
-          
-            <!-- Databases -->
-            <div class="skills-row">
-              <div class="marquee-content">
-                <span>MongoDB</span>
-                <span>SQL</span>
-                <span>PostgreSQL</span>
-                <span>SQLite</span>
-                <span>SQLAlchemy</span>
-                <span>NoSQL</span>
-
-                <span>MongoDB</span>
-                <span>SQL</span>
-                <span>PostgreSQL</span>
-                <span>SQLite</span>
-                <span>SQLAlchemy</span>
-                <span>NoSQL</span>
-
-                <span>MongoDB</span>
-                <span>SQL</span>
-                <span>PostgreSQL</span>
-                <span>SQLite</span>
-                <span>SQLAlchemy</span>
-                <span>NoSQL</span>
-
-                <span>MongoDB</span>
-                <span>SQL</span>
-                <span>PostgreSQL</span>
-                <span>SQLite</span>
-                <span>SQLAlchemy</span>
-                <span>NoSQL</span>
-
-                <span>MongoDB</span>
-                <span>SQL</span>
-                <span>PostgreSQL</span>
-                <span>SQLite</span>
-                <span>SQLAlchemy</span>
-                <span>NoSQL</span>
-
-                <span>MongoDB</span>
-                <span>SQL</span>
-                <span>PostgreSQL</span>
-                <span>SQLite</span>
-                <span>SQLAlchemy</span>
-                <span>NoSQL</span>
-
-                <span>MongoDB</span>
-                <span>SQL</span>
-                <span>PostgreSQL</span>
-                <span>SQLite</span>
-                <span>SQLAlchemy</span>
-                <span>NoSQL</span>
-              </div>
-            </div>
-          
-            <!-- Tools & Platforms -->
-            <div class="skills-row">
-              <div class="marquee-content">
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Visual Studio Code</span>
-                <span>PyCharm</span>
-                <span>Xcode</span>
-                <span>Postman</span>
-                <span>Unreal Engine</span>
-
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Visual Studio Code</span>
-                <span>PyCharm</span>
-                <span>Xcode</span>
-                <span>Postman</span>
-                <span>Unreal Engine</span>
-
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Visual Studio Code</span>
-                <span>PyCharm</span>
-                <span>Xcode</span>
-                <span>Postman</span>
-                <span>Unreal Engine</span>
-
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Visual Studio Code</span>
-                <span>PyCharm</span>
-                <span>Xcode</span>
-                <span>Postman</span>
-                <span>Unreal Engine</span>
-
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Visual Studio Code</span>
-                <span>PyCharm</span>
-                <span>Xcode</span>
-                <span>Postman</span>
-                <span>Unreal Engine</span>
-
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Visual Studio Code</span>
-                <span>PyCharm</span>
-                <span>Xcode</span>
-                <span>Postman</span>
-                <span>Unreal Engine</span>
-
-                <span>Git</span>
-                <span>GitHub</span>
-                <span>Visual Studio Code</span>
-                <span>PyCharm</span>
-                <span>Xcode</span>
-                <span>Postman</span>
-                <span>Unreal Engine</span>
-              </div>
-            </div>
-          
-            <!-- Concepts -->
-            <div class="skills-row">
-              <div class="marquee-content">
-                <span>Data Structures</span>
-                <span>Algorithms</span>
-                <span>Object-Oriented Programming</span>
-                <span>Agile Methodologies</span>
-                <span>RESTful APIs</span>
-                <span>Natural Language Processing</span>
-                <span>Version Control</span>
-                <span>Data Structures</span>
-                <span>Algorithms</span>
-                <span>Object-Oriented Programming</span>
-                <span>Agile Methodologies</span>
-                <span>RESTful APIs</span>
-                <span>Natural Language Processing</span>
-                <span>Version Control</span>
-              </div>
-            </div>
-          </div>
-        
-        <div id="project" class="container" data-aos="fade-up" style="padding-top: 100px;">
-            <p class="text-center mb-4" style="text-align: center;"><h1 style="color: #e9ecef;">Projects</h1><i style="color: grey;">A snippet of what I've built</i><br><i style="font-size: small; color:grey;">Visit my <a href="https://github.com/NiloySaha84" target="_blank" class="github-link">GitHub</a> to explore all my projects</i></p>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-
-              <div class="col" >
-                <div class="card h-100 border-0 project-card" style="background-color: #1f2937; color: #e9ecef;">
-                  <div class="project-img-container">
-                    <img src="images/ai summarizer.png" class="card-img-top" alt="AI Summarizer">
-                  </div>
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">QuickGist Chrome Extension</h5>
-                    <p class="card-text flex-grow-1">A browser extension that instantly condenses articles and YouTube videos using the OpenAI API. Features a clean, responsive interface, real-time content extraction, and a scalable backend optimized for speed, cost-efficiency, and improved summary relevance.</p>
-                    <a href="https://github.com/NiloySaha84/AI-Summarizer-Chrome-Extension" class="btn btn-outline-secondary mt-auto" style="color: #e9ecef;">View on GitHub</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card h-100 border-0 project-card" style="background-color: #1f2937; color: #e9ecef;">
-                  <div class="project-img-container">
-                    <img src="images/pass-manager.png" class="card-img-top" alt="Password Manager">
-                  </div>
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Password Manager</h5>
-                    <p class="card-text flex-grow-1">A secure password manager that stores encrypted credentials locally, with features like search, copy-to-clipboard, and auto-save using a clean, user-friendly interface.</p>
-                    <a href="https://github.com/NiloySaha84/Password-Manager-App" class="btn btn-outline-secondary mt-auto" style="color: #e9ecef;">View on GitHub</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card h-100 border-0 project-card" style="background-color: #1f2937; color: #e9ecef;">
-                  <div class="project-img-container">
-                    <img src="images/Screenshot 2025-08-24 at 9.03.51 PM.png" class="card-img-top" alt="CourseCrafter AI">
-                  </div>
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">CourseCrafter AI</h5>
-                    <p class="card-text flex-grow-1">A full-stack web app that generates structured learning courses from user-provided topics. Uses the OpenAI API to create course outlines and lessons, and integrates the YouTube Data API to recommend supporting video resources. Built with Node.js, Express, EJS, and Bootstrap for a responsive, accessible experience.</p>
-                    <a href="https://github.com/NiloySaha84/Ai-Course-Builder" class="btn btn-outline-secondary mt-auto" style="color: #e9ecef;">View on GitHub</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col">
-                <div class="card h-100 border-0 project-card" style="background-color: #1f2937; color: #e9ecef;">
-                  <div class="project-img-container">
-                    <img src="images/Screenshot 2025-08-29 at 11.11.33 PM.png" class="card-img-top" alt="Credit Card Fraudulent Predictor">
-                  </div>
-                  <div class="card-body d-flex flex-column">
-                    <h5 class="card-title">Credit Card Fraudulent Predictor</h5>
-                    <p class="card-text flex-grow-1">A machine learning model that analyzes 50,000+ credit card transactions to detect fraudulent activity, using data preprocessing, feature engineering, and SMOTE balancing to improve accuracy and reliability.</p>
-                    <a href="https://github.com/NiloySaha84/Credit_Card-fraud-detector" class="btn btn-outline-secondary mt-auto" style="color: #e9ecef;">View on GitHub</a>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-        </div>
-
-        <div class="container-fluid" id="contact" style="padding-top: 5%; background-color: #1f2937; margin-top: 50px;">
-            <h1 style="text-align: center; padding-top:20px; color: #e9ecef;">Contact Info</h1>
-            <div class="row justify-content-center mt-4">
-                <div class="col-md-6">
-                    <div class="text-center">
-                        <p class="mb-2">
-                            <i class="fa-solid fa-envelope fa-lg me-2 text-light"></i>
-                            <a href="mailto:sahaniloy389@gmail.com" class="text-decoration-none">sahaniloy389@gmail.com</a>
-                        </p>
-                        <p>
-                            <i class="fa-brands fa-linkedin fa-lg me-2 text-light"></i>
-                            <a href="http://www.linkedin.com/in/niloysaha35" target="_blank" class="text-decoration-none">linkedin.com/in/niloysaha35</a>
-                        </p>
+                    <div class="info-item">
+                        <strong>University:</strong> <span>Hofstra University</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Email:</strong> <span>sahaniloy389@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Availability:</strong> <span>Open to opportunities</span>
                     </div>
                 </div>
             </div>
-            <footer style="padding-left: 20px; font-size:small; padding-bottom:5px; color:#e9ecef">© 2025 Niloy Saha. Built with passion and code.</footer>
         </div>
+    </section>
 
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script>
-          AOS.init({
-            duration: 700,
-            easing: 'ease-out',
-            once: false,
-            mirror: true,
-            offset: 250
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-date">2023 - Present</span>
+                    <h3>Bachelor of Science in Computer Science</h3>
+                    <h4>Hofstra University</h4>
+                    <p>GPA: 3.5/4.0 • Dean's List • Relevant coursework: Computing in Python, Advanced Data Structures and Algorithms, OOP, Software Engineering,
+                    Computer Operating Systems, Applied NLP & Text Mining</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-date">2009 - 2023</span>
+                    <h3>Primary School - High School (A-Levels)</h3>
+                    <h4>Bangladesh International Tutorial</h4>
+                    <p>Graduated with Honors • Computer Science Club President • Mathematics Team Captain</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-          });
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="index.js" charset="UTF-8"></script>
-    </body>
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-date">Sept 2025 - Current</span>
+                    <h3>Student IT Technician</h3>
+                    <h4>Maurice A. Deane School of Law at Hofstra University - IT Department</h4>
+                    <p>• Cut troubleshooting time by 15% by developing Python scripts to automate recurring IT support tasks, reinforcing
+                        practical programming skills.<br>
+                    • Ensured 99% uptime for several law school devices by configuring and monitoring networks using TCP/IP and DNS
+                    protocols.<br>
+                    • Reduced repeat support tickets by 20% through building a structured knowledge base, leveraging database
+                    organization and information retrieval principles.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-date">Jan 2025 - Apr 2025</span>
+                    <h3>Resident Success Representative</h3>
+                    <h4>Hofstra University - Public Safety Department</h4>
+                    <p>• Assisted students and staff with IT-related queries, including network access, software troubleshooting, and campus system navigation.<br>
+                    • Maintained and updated digital records for residents, ensuring accurate tracking of dorm assignments and student information.<br>
+                    • Supported student engagement initiatives by organizing tech-oriented workshops and providing guidance on campus technology resources.<br></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Programming Languages</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Dart</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Frameworks & Libraries</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Express</span>
+                    <span class="skill-tag">Axios</span>
+                    <span class="skill-tag">Django</span>
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">Pandas</span>
+                    <span class="skill-tag">NumPy</span>
+                    <span class="skill-tag">Bootstrap</span>
+                    <span class="skill-tag">jQuery</span>
+                    <span class="skill-tag">EJS</span>
+                    <span class="skill-tag">Jinja</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Technologies</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Git/GitHub</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">NoSQL</span>
+                    <span class="skill-tag">Postman</span>
+                    <span class="skill-tag">Unreal Engine 5</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Concepts</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Problem Solving</span>
+                    <span class="skill-tag">Data Structures</span>
+                    <span class="skill-tag">Algorithms</span>
+                    <span class="skill-tag">OOP</span>
+                    <span class="skill-tag">Natural Language Processing</span>
+                    <span class="skill-tag">RESTful APIs</span>
+                    <span class="skill-tag">Agile Methodologies</span>
+                    <span class="skill-tag">Version Control</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">🤖📝</div>
+                <div class="project-content">
+                    <h3>QuickGist AI Chrome Extension</h3>
+                    <p>A browser extension that instantly condenses articles and YouTube videos using the OpenAI API. Features a clean, responsive interface, real-time content extraction, and a scalable backend optimized for speed, cost-efficiency, and improved summary relevance.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">HTML/CSS/JS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/NiloySaha84/AI-Summarizer-Chrome-Extension">💻 GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">💳📊</div>
+                <div class="project-content">
+                    <h3>Credit Card Fraudulent Detector</h3>
+                    <p>A machine learning model that analyzes 50,000+ credit card transactions to detect fraudulent activity, using data preprocessing, feature engineering, and SMOTE balancing to improve accuracy and reliability.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">scikit-learn</span>
+                        <span class="tech-tag">Matplotlib</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/NiloySaha84/Credit_Card-fraud-detector">💻 GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">🤖📚</div>
+                <div class="project-content">
+                    <h3>CourseCrafter AI</h3>
+                    <p>A full-stack web app that generates structured learning courses from user-provided topics. Uses the OpenAI API to create course outlines and lessons, and integrates the YouTube Data API to recommend supporting video resources. Built with Node.js, Express, EJS, and Bootstrap for a responsive, accessible experience.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">EJS Templating</span>
+                        <span class="tech-tag">Axios</span>
+                        <span class="tech-tag">NPM Packages</span>
+                        <span class="tech-tag">REST API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://ai-course-builder.onrender.com/">🔗 Live Demo</a>
+                        <a href="https://github.com/NiloySaha84/Ai-Course-Builder">💻 GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">🖥️</div>
+                <div class="project-content">
+                    <h3>System Health Monitor</h3>
+                    <p>A Python script that monitors the health of the system by tracking CPU usage, disk space, and network usage. If any of these parameters exceed a set threshold, the script will send an email alert. It also logs the system data in a JSON file for future reference.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">psutil</span>
+                        <span class="tech-tag">smtplib</span>
+                        <span class="tech-tag">email.mine</span>
+                        <span class="tech-tag">JSON</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/NiloySaha84/SystemHealthMonitor">💻 GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">🎮🐉</div>
+                <div class="project-content">
+                    <h3>Dragon Slayer Game</h3>
+                    <p>A C++ game simulation using SFML (Simple and Fast Multimedia Library). The simulation involves a dragon, a slayer, obstacles, and food items. The goal is to move the dragon around the game grid, avoid obstacles, and consume food while avoiding the slayer. The slayer will hunt the dragon based on its proximity, and if it catches up, the dragon will lose some of its length.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">SFML</span>
+                        <span class="tech-tag">OOP</span>
+                        <span class="tech-tag">Data Structure (Deque)</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/NiloySaha84/DragonSlayerGame">💻 GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">🔐</div>
+                <div class="project-content">
+                    <h3>Password Manager</h3>
+                    <p>A secure password manager that stores encrypted credentials locally, with features like search, copy-to-clipboard, and auto-save using a clean, user-friendly interface.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">cryptography</span>
+                        <span class="tech-tag">JSON</span>
+                        <span class="tech-tag">CRUD</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://password-manager-app-1-gvse.onrender.com/">🔗 Live Demo</a>
+                        <a href="https://github.com/NiloySaha84/Password-Manager-App">💻 GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-content">
+            <p>I'm always interested in hearing about new opportunities and interesting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
+            <a href="mailto:sahaniloy389@gmail.com" class="btn btn-primary">Send Message</a>
+            <div class="social-links">
+                <a href="https://github.com/NiloySaha84" aria-label="GitHub">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                </a>
+                <a href="http://www.linkedin.com/in/niloysaha35" aria-label="LinkedIn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                </a>
+                <a href="mailto:sahaniloy389@gmail.com" aria-label="Email">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Niloy Saha. All rights reserved. | Built with passion and code 🩶</p>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        // Check for saved theme preference or default to light
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', currentTheme);
+        
+        themeToggle.addEventListener('click', () => {
+            const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section');
+        const navItems = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href').slice(1) === current) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Close mobile menu when clicking on a link
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
 </html>
