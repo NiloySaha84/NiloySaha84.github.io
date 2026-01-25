@@ -183,6 +183,37 @@ nav.scrolled {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  min-height: 1.2em;
+}
+
+.stream-text {
+  display: inline-block;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Fade Up Animation for Sections */
+.fade-up-section {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.fade-up-section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero .subtitle {

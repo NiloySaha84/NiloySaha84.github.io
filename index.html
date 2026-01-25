@@ -31,7 +31,7 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <h1>Hi, I'm Niloy Saha</h1>
+            <h1><span class="stream-text"></span><span class="cursor">|</span></h1>
             <p class="subtitle">Aspiring Software Engineer | Computer Science Student</p>
             <div class="hero-buttons">
                 <a href="NiloySaha Resume.pdf" class="btn btn-primary">My Resume</a>
@@ -41,7 +41,7 @@
     </section>
 
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="fade-up-section">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <div class="about-image">
@@ -70,7 +70,7 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education">
+    <section id="education" class="fade-up-section">
         <h2 class="section-title">Education</h2>
         <div class="timeline">
             <div class="timeline-item">
@@ -94,23 +94,23 @@
     </section>
 
     <!-- Experience Section -->
-    <section id="experience">
+    <section id="experience" class="fade-up-section">
         <h2 class="section-title">Experience</h2>
         <div class="timeline">
             <div class="timeline-item">
                 <div class="timeline-content">
-                    <span class="timeline-date">Sept 2025 - Current</span>
-                    <h3>IT Systems Support Engineer (Student Role)</h3>
+                    <span class="timeline-date">Jan 2026 - Current</span>
+                    <h3>Software Developer Intern</h3>
+                    <h4>Optimum Communications Inc - Systems and Tools Team</h4>
+                    
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-date">Sept 2025 - Dec 2025</span>
+                    <h3>IT Student Technician</h3>
                     <h4>Maurice A. Deane School of Law at Hofstra University - IT Department</h4>
-                    <p>• Accomplished faster IT troubleshooting as measured by a 15% reduction in resolution time, by developing Python
-                        scripts to automate log analysis, system monitoring, and routine error handling.<br>
-                    • Ensured 99% uptime for several law school devices by configuring and monitoring networks using TCP/IP and DNS
-                    protocols.<br>
-                    • Reduced repeat support tickets by 20% through building a structured knowledge base, leveraging database
-                    organization and information retrieval principles.<br>
-                    • Collaborated with senior engineers to implement proactive monitoring tools and troubleshoot complex multi-user
-                    systems in real time.
-                    </p>
+                    
                 </div>
             </div>
             <div class="timeline-item">
@@ -118,16 +118,13 @@
                     <span class="timeline-date">Jan 2025 - Apr 2025</span>
                     <h3>Resident Success Representative</h3>
                     <h4>Hofstra University - Public Safety Department</h4>
-                    <p>• Assisted students and staff with IT-related queries, including network access, software troubleshooting, and campus system navigation.<br>
-                    • Maintained and updated digital records for residents, ensuring accurate tracking of dorm assignments and student information.<br>
-                    • Supported student engagement initiatives by organizing tech-oriented workshops and providing guidance on campus technology resources.<br></p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills">
+    <section id="skills" class="fade-up-section">
         <h2 class="section-title">Skills</h2>
         <div class="skills-grid">
             <div class="skill-category">
@@ -202,7 +199,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="fade-up-section">
         <h2 class="section-title">Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
@@ -341,7 +338,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact">
+    <section id="contact" class="fade-up-section">
         <h2 class="section-title">Get In Touch</h2>
         <div class="contact-content">
             <p>I'm always interested in hearing about new opportunities and interesting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
@@ -372,6 +369,42 @@
     </footer>
 
     <script>
+        // Streaming text animation
+        const streamText = document.querySelector('.stream-text');
+        const text = "Hi, I'm Niloy Saha";
+        let index = 0;
+        
+        function typeWriter() {
+            if (index < text.length) {
+                streamText.textContent += text.charAt(index);
+                index++;
+                setTimeout(typeWriter, 100); // Adjust speed 
+            }
+        }
+        
+        // Start animation after a short delay
+        setTimeout(typeWriter, 500);
+
+        // Fade Up Animation for Sections
+        const fadeUpSections = document.querySelectorAll('.fade-up-section');
+        
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        fadeUpSections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
         // Theme Toggle
         const themeToggle = document.getElementById('themeToggle');
         const html = document.documentElement;
