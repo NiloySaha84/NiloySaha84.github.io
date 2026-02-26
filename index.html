@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Niloy Saha | Projects & Skills Showcase</title>
+    <title>Niloy Saha | Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- Navbar -->
     <nav id="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">Niloy Saha</a>
+            <a href="#home" class="logo">&lt;NS /&gt;</a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
@@ -30,39 +36,62 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-glow hero-glow-1"></div>
+        <div class="hero-glow hero-glow-2"></div>
         <div class="hero-content">
-            <h1><span class="stream-text"></span><span class="cursor">|</span></h1>
-            <p class="subtitle">Aspiring Software Engineer | Computer Science Student</p>
+            <p class="hero-greeting mono">Hi, my name is</p>
+            <h1 class="hero-name"><span class="stream-text"></span><span class="cursor">|</span></h1>
+            <h2 class="hero-tagline">I build things for the web.</h2>
+            <p class="hero-description">Aspiring Software Engineer | Computer Science Student</p>
             <div class="hero-buttons">
-                <a href="NiloySaha Resume.pdf" class="btn btn-primary">My Resume</a>
+                <a href="NiloySaha Resume.pdf" class="btn btn-primary">
+                    <span>My Resume</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+                </a>
                 <a href="#contact" class="btn btn-outline">Get In Touch</a>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p class="mono">scroll down</p>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="fade-up-section">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-image">
-                <img src="mypic.PNG" alt="Niloy Saha">
-            </div>
-            <div class="about-text">
-                <h3>Passionate about creating innovative solutions</h3>
-                <p>I am a dedicated Computer Science student with a strong passion for software development and problem-solving. Pursuing my Bachelor's degree in Computer Science, I am focused on developing a solid foundation in programming, algorithms, and software engineering principles to design efficient and innovative solutions.</p>  
-                <p>My journey in tech began with curiosity about how things work, and has evolved into a commitment to creating meaningful applications that make a difference. I enjoy tackling challenging problems and continuously learning new technologies.</p>
-                <div class="about-info">
-                    <div class="info-item">
-                        <strong>Location:</strong> <span>New York, USA</span>
+    <section id="about" class="section fade-up-section">
+        <div class="section-container">
+            <h2 class="section-title"><span class="mono section-number">01.</span> About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Passionate About Building Intelligent Systems</h3>
+                    <p>I am a Computer Science student driven by a deep interest in artificial intelligence, scalable systems, and real-world problem solving. Through academic coursework and hands-on projects, I focus on building efficient, data-driven solutions grounded in strong fundamentals of algorithms, software engineering, and system design.</p>
+                    <p>My curiosity about how complex systems operate has evolved into a commitment to developing intelligent applications that improve performance, automation, and decision-making. I enjoy solving challenging technical problems and continuously exploring emerging technologies in AI, machine learning, and distributed systems.</p>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span class="info-label">Location</span>
+                            <span class="info-value">New York, USA</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">University</span>
+                            <span class="info-value">Hofstra University</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email</span>
+                            <span class="info-value">sahaniloy389@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Availability</span>
+                            <span class="info-value highlight">Open to opportunities</span>
+                        </div>
                     </div>
-                    <div class="info-item">
-                        <strong>University:</strong> <span>Hofstra University</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Email:</strong> <span>sahaniloy389@gmail.com</span>
-                    </div>
-                    <div class="info-item">
-                        <strong>Availability:</strong> <span>Open to opportunities</span>
+                </div>
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="mypic.PNG" alt="Niloy Saha">
+                        <div class="image-border"></div>
                     </div>
                 </div>
             </div>
@@ -70,293 +99,376 @@
     </section>
 
     <!-- Education Section -->
-    <section id="education" class="fade-up-section">
-        <h2 class="section-title">Education</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <span class="timeline-date">2023 - Present</span>
-                    <h3>Bachelor of Science in Computer Science</h3>
-                    <h4>Hofstra University</h4>
-                    <p>GPA: 3.5/4.0 • Dean's List • Relevant coursework: Computing in Python, Advanced Data Structures and Algorithms, OOP, Software Engineering,
-                    Computer Operating Systems, Applied NLP & Text Mining</p>
+    <section id="education" class="section fade-up-section">
+        <div class="section-container">
+            <h2 class="section-title"><span class="mono section-number">02.</span> Education</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date mono">2023 - Present</span>
+                        <h3>Bachelor of Science in Computer Science</h3>
+                        <h4>Hofstra University</h4>
+                        <p>GPA: 3.5/4.0 &bull; Dean's List &bull; Relevant coursework: Computing in Python, Advanced Data Structures and Algorithms, OOP, Software Engineering, Computer Operating Systems, Applied NLP &amp; Text Mining</p>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <span class="timeline-date">2009 - 2023</span>
-                    <h3>Primary School - High School (A-Levels)</h3>
-                    <h4>Bangladesh International Tutorial</h4>
-                    <p>Graduated with Honors • Computer Science Club President • Mathematics Team Captain</p>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date mono">2009 - 2023</span>
+                        <h3>Primary School - High School (A-Levels)</h3>
+                        <h4>Bangladesh International Tutorial</h4>
+                        <p>Graduated with Honors &bull; Computer Science Club President &bull; Mathematics Team Captain</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
-    <section id="experience" class="fade-up-section">
-        <h2 class="section-title">Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <span class="timeline-date">Jan 2026 - Current</span>
-                    <h3>Software Developer Intern</h3>
-                    <h4>Optimum Communications Inc - Systems and Tools Team</h4>
-                    
+    <section id="experience" class="section fade-up-section">
+        <div class="section-container">
+            <h2 class="section-title"><span class="mono section-number">03.</span> Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot pulse"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date mono">Jan 2026 - Current</span>
+                        <h3>Software Developer Intern</h3>
+                        <h4>Optimum Communications Inc - NOC Surveillance Team</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <span class="timeline-date">Sept 2025 - Dec 2025</span>
-                    <h3>IT Student Technician</h3>
-                    <h4>Maurice A. Deane School of Law at Hofstra University - IT Department</h4>
-                    
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date mono">Sept 2025 - Dec 2025</span>
+                        <h3>IT Student Technician</h3>
+                        <h4>Maurice A. Deane School of Law at Hofstra University - IT Department</h4>
+                    </div>
                 </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-content">
-                    <span class="timeline-date">Jan 2025 - Apr 2025</span>
-                    <h3>Resident Success Representative</h3>
-                    <h4>Hofstra University - Public Safety Department</h4>
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date mono">Jan 2025 - Apr 2025</span>
+                        <h3>Resident Success Representative</h3>
+                        <h4>Hofstra University - Public Safety Department</h4>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="fade-up-section">
-        <h2 class="section-title">Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category">
-                <h3>Programming Languages</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">HTML/CSS</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">Dart</span>
-                    <span class="skill-tag">TypeScript</span>
+    <section id="skills" class="section fade-up-section">
+        <div class="section-container">
+            <h2 class="section-title"><span class="mono section-number">04.</span> Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category glass-card" data-category="languages">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Dart</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Bash</span>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-category">
-                <h3>Frameworks & Libraries</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Next.js</span>
-                    <span class="skill-tag">Express</span>
-                    <span class="skill-tag">Axios</span>
-                    <span class="skill-tag">Django</span>
-                    <span class="skill-tag">Flask</span>
-                    <span class="skill-tag">Pandas</span>
-                    <span class="skill-tag">NumPy</span>
-                    <span class="skill-tag">scikit-learn</span>
-                    <span class="skill-tag">Spacy</span>
-                    <span class="skill-tag">NLTK</span>
-                    <span class="skill-tag">Bootstrap</span>
-                    <span class="skill-tag">jQuery</span>
-                    <span class="skill-tag">EJS</span>
-                    <span class="skill-tag">Jinja</span>
+                <div class="skill-category glass-card" data-category="frameworks">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                        </div>
+                        <h3>Frameworks &amp; Libraries</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Axios</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">Spacy</span>
+                        <span class="skill-tag">NLTK</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">UV</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">jQuery</span>
+                        <span class="skill-tag">EJS</span>
+                        <span class="skill-tag">Jinja</span>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-category">
-                <h3>Tools & Technologies</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Git/GitHub</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">MySQL</span>
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">Postman</span>
-                    <span class="skill-tag">Unreal Engine 5</span>
-                    <span class="skill-tag">Firebase</span>
-                    <span class="skill-tag">Supabase</span>
-                    <span class="skill-tag">Clerk</span>
-                    <span class="skill-tag">Heroku</span>
-                    <span class="skill-tag">Vercel</span>
-                    <span class="skill-tag">Render</span>
-                    <span class="skill-tag">Linux</span>
-                    <span class="skill-tag">Stripe</span>
+                <div class="skill-category glass-card" data-category="tools">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <h3>Tools &amp; Technologies</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git/GitHub</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Vector DBs (e.g. FAISS)</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Unreal Engine 5</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Supabase</span>
+                        <span class="skill-tag">Clerk</span>
+                        <span class="skill-tag">Heroku</span>
+                        <span class="skill-tag">Vercel</span>
+                        <span class="skill-tag">Render</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Stripe</span>
+                        <span class="skill-tag">Zabbix</span>
+                    </div>
                 </div>
-            </div>
-            <div class="skill-category">
-                <h3>Concepts</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Problem Solving</span>
-                    <span class="skill-tag">Data Structures</span>
-                    <span class="skill-tag">Algorithms</span>
-                    <span class="skill-tag">OOP</span>
-                    <span class="skill-tag">Natural Language Processing</span>
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">RESTful APIs</span>
-                    <span class="skill-tag">Agile Methodologies</span>
-                    <span class="skill-tag">Version Control</span>
+                <div class="skill-category glass-card" data-category="concepts">
+                    <div class="skill-category-header">
+                        <div class="skill-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        </div>
+                        <h3>Concepts</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Problem Solving</span>
+                        <span class="skill-tag">Data Structures</span>
+                        <span class="skill-tag">Algorithms</span>
+                        <span class="skill-tag">OOP</span>
+                        <span class="skill-tag">Natural Language Processing</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Supervised Learning</span>
+                        <span class="skill-tag">Unsupervised Learning</span>
+                        <span class="skill-tag">DeepLearning</span>
+                        <span class="skill-tag">Neural Networks</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                        <span class="skill-tag">Agile Methodologies</span>
+                        <span class="skill-tag">Version Control</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="fade-up-section">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">🤖📚📢</div>
-                <div class="project-content">
-                    <h3>EduFlow AI - AI-Powered Learning Platform</h3>
-                    <p>This is a modern, interactive learning platform that combines artificial intelligence with voice technology to create personalized educational companions. Students can engage in real-time voice conversations with AI tutors across various subjects, making learning more engaging and accessible.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Next.js 15</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Tailwind CSS</span>
-                        <span class="tech-tag">Lucide React</span>
-                        <span class="tech-tag">Deepgram</span>
-                        <span class="tech-tag">ElevenLabs</span>
-                        <span class="tech-tag">Vapi AI</span>
-                        <span class="tech-tag">OpenAI API</span>
-                        <span class="tech-tag">Clerk</span>
-                        <span class="tech-tag">Supabase (PostgreSQL)</span>
+    <section id="projects" class="section fade-up-section">
+        <div class="section-container">
+            <h2 class="section-title"><span class="mono section-number">05.</span> Projects</h2>
+            <div class="projects-grid">
+
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div class="project-top-links">
+                            <a href="https://ai-study-companion-eight.vercel.app/" aria-label="Live Demo" class="project-icon-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                            <a href="https://github.com/NiloySaha84/Ai_Study_Companion" aria-label="GitHub" class="project-icon-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://ai-study-companion-eight.vercel.app/">🔗 Live Demo</a>
-                        <a href="https://github.com/NiloySaha84/Ai_Study_Companion">💻 GitHub</a>
+                    <h3 class="project-title">EduFlow AI - AI-Powered Learning Platform</h3>
+                    <p class="project-description">This is a modern, interactive learning platform that combines artificial intelligence with voice technology to create personalized educational companions. Students can engage in real-time voice conversations with AI tutors across various subjects, making learning more engaging and accessible.</p>
+                    <div class="project-tech">
+                        <span>Next.js 15</span>
+                        <span>TypeScript</span>
+                        <span>Tailwind CSS</span>
+                        <span>Deepgram</span>
+                        <span>ElevenLabs</span>
+                        <span>Vapi AI</span>
+                        <span>OpenAI API</span>
+                        <span>Clerk</span>
+                        <span>Supabase</span>
                     </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">🤖📚📆</div>
-                <div class="project-content">
-                    <h3>Smart Syllabus Calendar Sync</h3>
-                    <p>A Next.js 14 application that transforms PDF or text syllabi into interactive, AI-powered academic calendars, featuring smart date extraction, event categorization, Google Calendar sync, and a responsive, user-friendly interface.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Next.js 14</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Tailwind CSS</span>
-                        <span class="tech-tag">pdf-parse</span>
-                        <span class="tech-tag">chrono-node</span>
-                        <span class="tech-tag">React Big Calendar</span>
-                        <span class="tech-tag">Moment.js</span>
-                        <span class="tech-tag">OpenAI API</span>
-                        <span class="tech-tag">Google OAuth2</span>
+
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div class="project-top-links">
+                            <a href="https://syllabus-calendar-navy.vercel.app/" aria-label="Live Demo" class="project-icon-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                            <a href="https://github.com/NiloySaha84/Syllabus-Calendar" aria-label="GitHub" class="project-icon-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://syllabus-calendar-navy.vercel.app/">🔗 Live Demo</a>
-                        <a href="https://github.com/NiloySaha84/Syllabus-Calendar">💻 GitHub</a>
+                    <h3 class="project-title">Smart Syllabus Calendar Sync</h3>
+                    <p class="project-description">A Next.js 14 application that transforms PDF or text syllabi into interactive, AI-powered academic calendars, featuring smart date extraction, event categorization, Google Calendar sync, and a responsive, user-friendly interface.</p>
+                    <div class="project-tech">
+                        <span>Next.js 14</span>
+                        <span>TypeScript</span>
+                        <span>Tailwind CSS</span>
+                        <span>pdf-parse</span>
+                        <span>chrono-node</span>
+                        <span>React Big Calendar</span>
+                        <span>OpenAI API</span>
+                        <span>Google OAuth2</span>
                     </div>
                 </div>
-            </div>
-            
-            <div class="project-card">
-                <div class="project-image">🤖📝</div>
-                <div class="project-content">
-                    <h3>QuickGist AI Chrome Extension</h3>
-                    <p>A browser extension that instantly condenses articles and YouTube videos using the OpenAI API. Features a clean, responsive interface, real-time content extraction, and a scalable backend optimized for speed, cost-efficiency, and improved summary relevance.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">HTML/CSS/JS</span>
+
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div class="project-top-links">
+                            <a href="https://github.com/NiloySaha84/AI-Summarizer-Chrome-Extension" aria-label="GitHub" class="project-icon-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/NiloySaha84/AI-Summarizer-Chrome-Extension">💻 GitHub</a>
+                    <h3 class="project-title">QuickGist AI Chrome Extension</h3>
+                    <p class="project-description">A browser extension that instantly condenses articles and YouTube videos using the OpenAI API. Features a clean, responsive interface, real-time content extraction, and a scalable backend optimized for speed, cost-efficiency, and improved summary relevance.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>Docker</span>
+                        <span>HTML/CSS/JS</span>
                     </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">💳📊</div>
-                <div class="project-content">
-                    <h3>Credit Card Fraudulent Detector</h3>
-                    <p>A machine learning model that analyzes 50,000+ credit card transactions to detect fraudulent activity, using data preprocessing, feature engineering, and SMOTE balancing to improve accuracy and reliability.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">NumPy</span>
-                        <span class="tech-tag">scikit-learn</span>
-                        <span class="tech-tag">Matplotlib</span>
+
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div class="project-top-links">
+                            <a href="https://github.com/NiloySaha84/Credit_Card-fraud-detector" aria-label="GitHub" class="project-icon-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/NiloySaha84/Credit_Card-fraud-detector">💻 GitHub</a>
+                    <h3 class="project-title">Credit Card Fraudulent Detector</h3>
+                    <p class="project-description">A machine learning model that analyzes 50,000+ credit card transactions to detect fraudulent activity, using data preprocessing, feature engineering, and SMOTE balancing to improve accuracy and reliability.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>scikit-learn</span>
+                        <span>Matplotlib</span>
                     </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">🤖📚</div>
-                <div class="project-content">
-                    <h3>CourseCrafter AI</h3>
-                    <p>A full-stack web app that generates structured learning courses from user-provided topics. Uses the OpenAI API to create course outlines and lessons, and integrates the YouTube Data API to recommend supporting video resources. Built with Node.js, Express, EJS, and Bootstrap for a responsive, accessible experience.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">Express</span>
-                        <span class="tech-tag">EJS Templating</span>
-                        <span class="tech-tag">Axios</span>
-                        <span class="tech-tag">NPM Packages</span>
-                        <span class="tech-tag">REST API</span>
+
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div class="project-top-links">
+                            <a href="https://ai-course-builder.onrender.com/" aria-label="Live Demo" class="project-icon-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                            <a href="https://github.com/NiloySaha84/Ai-Course-Builder" aria-label="GitHub" class="project-icon-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://ai-course-builder.onrender.com/">🔗 Live Demo</a>
-                        <a href="https://github.com/NiloySaha84/Ai-Course-Builder">💻 GitHub</a>
+                    <h3 class="project-title">CourseCrafter AI</h3>
+                    <p class="project-description">A full-stack web app that generates structured learning courses from user-provided topics. Uses the OpenAI API to create course outlines and lessons, and integrates the YouTube Data API to recommend supporting video resources. Built with Node.js, Express, EJS, and Bootstrap for a responsive, accessible experience.</p>
+                    <div class="project-tech">
+                        <span>Node.js</span>
+                        <span>Express</span>
+                        <span>EJS Templating</span>
+                        <span>Axios</span>
+                        <span>NPM Packages</span>
+                        <span>REST API</span>
                     </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">🎮🐉</div>
-                <div class="project-content">
-                    <h3>Dragon Slayer Game</h3>
-                    <p>A C++ game simulation using SFML (Simple and Fast Multimedia Library). The simulation involves a dragon, a slayer, obstacles, and food items. The goal is to move the dragon around the game grid, avoid obstacles, and consume food while avoiding the slayer. The slayer will hunt the dragon based on its proximity, and if it catches up, the dragon will lose some of its length.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">C++</span>
-                        <span class="tech-tag">SFML</span>
-                        <span class="tech-tag">OOP</span>
-                        <span class="tech-tag">Data Structure (Deque)</span>
+
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div class="project-top-links">
+                            <a href="https://github.com/NiloySaha84/DragonSlayerGame" aria-label="GitHub" class="project-icon-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/NiloySaha84/DragonSlayerGame">💻 GitHub</a>
+                    <h3 class="project-title">Dragon Slayer Game</h3>
+                    <p class="project-description">A C++ game simulation using SFML (Simple and Fast Multimedia Library). The simulation involves a dragon, a slayer, obstacles, and food items. The goal is to move the dragon around the game grid, avoid obstacles, and consume food while avoiding the slayer. The slayer will hunt the dragon based on its proximity, and if it catches up, the dragon will lose some of its length.</p>
+                    <div class="project-tech">
+                        <span>C++</span>
+                        <span>SFML</span>
+                        <span>OOP</span>
+                        <span>Data Structure (Deque)</span>
                     </div>
                 </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">🔐</div>
-                <div class="project-content">
-                    <h3>Password Manager</h3>
-                    <p>A secure password manager that stores encrypted credentials locally, with features like search, copy-to-clipboard, and auto-save using a clean, user-friendly interface.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Streamlit</span>
-                        <span class="tech-tag">cryptography</span>
-                        <span class="tech-tag">JSON</span>
-                        <span class="tech-tag">CRUD</span>
+
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                        </div>
+                        <div class="project-top-links">
+                            <a href="https://password-manager-app-1-gvse.onrender.com/" aria-label="Live Demo" class="project-icon-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                            </a>
+                            <a href="https://github.com/NiloySaha84/Password-Manager-App" aria-label="GitHub" class="project-icon-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                            </a>
+                        </div>
                     </div>
-                    <div class="project-links">
-                        <a href="https://password-manager-app-1-gvse.onrender.com/">🔗 Live Demo</a>
-                        <a href="https://github.com/NiloySaha84/Password-Manager-App">💻 GitHub</a>
+                    <h3 class="project-title">Password Manager</h3>
+                    <p class="project-description">A secure password manager that stores encrypted credentials locally, with features like search, copy-to-clipboard, and auto-save using a clean, user-friendly interface.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>cryptography</span>
+                        <span>JSON</span>
+                        <span>CRUD</span>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="fade-up-section">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-content">
-            <p>I'm always interested in hearing about new opportunities and interesting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
-            <a href="mailto:sahaniloy389@gmail.com" class="btn btn-primary">Send Message</a>
+    <section id="contact" class="section fade-up-section">
+        <div class="section-container contact-section">
+            <p class="mono section-number">06. What's Next?</p>
+            <h2 class="contact-title">Get In Touch</h2>
+            <p class="contact-description">I'm always interested in hearing about new opportunities and interesting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
+            <a href="mailto:sahaniloy389@gmail.com" class="btn btn-primary btn-large">
+                <span>Say Hello</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
             <div class="social-links">
                 <a href="https://github.com/NiloySaha84" aria-label="GitHub">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                     </svg>
                 </a>
                 <a href="http://www.linkedin.com/in/niloysaha35" aria-label="LinkedIn">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                     </svg>
                 </a>
                 <a href="mailto:sahaniloy389@gmail.com" aria-label="Email">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
                     </svg>
                 </a>
             </div>
@@ -365,7 +477,10 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Niloy Saha. All rights reserved. | Built with passion and code 🩶</p>
+        <div class="footer-content">
+            <p class="mono">&copy; 2025 Niloy Saha. All rights reserved.</p>
+            <p class="footer-sub">Built with passion and code</p>
+        </div>
     </footer>
 
     <!-- Chatbot Widget -->
@@ -375,18 +490,17 @@
             <button id="closeChatbot" class="close-chatbot">&times;</button>
         </div>
         <div class="chatbot-content">
-            <!-- REPLACE THIS URL WITH YOUR GRADIO CHATBOT PUBLIC URL -->
             <iframe 
                 id="chatbotIframe"
-                src="Put your Gradio app URL here" 
+                /*src="https://d62593e19ea8410416.gradio.live" 
                 frameborder="0" 
                 width="100%" 
                 height="100%"
                 allow="microphone">
             </iframe>
             <div id="chatbotError" class="chatbot-error">
-                <div class="error-icon">🤖💤</div>
-                <h3>Oops! The AI is Taking a Coffee Break ☕</h3>
+                <div class="error-icon">&#x1F916;&#x1F4A4;</div>
+                <h3>Oops! The AI is Taking a Coffee Break</h3>
                 <p>My chatbot is currently under development and decided to take a quick nap.</p>
                 <p class="error-detail">Don't worry, it's dreaming of better responses!</p>
                 <p class="error-subtext">Check back soon or reach out via email below.</p>
@@ -397,29 +511,55 @@
 
     <!-- Floating Chat Button -->
     <button id="chatbotButton" class="chatbot-button" aria-label="Open Chatbot">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
         </svg>
     </button>
 
+    <!-- Side Social Links -->
+    <div class="side-social left">
+        <a href="https://github.com/NiloySaha84" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="http://www.linkedin.com/in/niloysaha35" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="mailto:sahaniloy389@gmail.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+        <div class="side-line"></div>
+    </div>
+
+    <div class="side-social right">
+        <a href="mailto:sahaniloy389@gmail.com" class="side-email mono">sahaniloy389@gmail.com</a>
+        <div class="side-line"></div>
+    </div>
+
     <script>
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const progress = (scrollTop / scrollHeight) * 100;
+            document.getElementById('scrollProgress').style.width = progress + '%';
+        });
+
         // Streaming text animation
         const streamText = document.querySelector('.stream-text');
-        const text = "Hi, I'm Niloy Saha";
+        const text = "Niloy Saha.";
         let index = 0;
         
         function typeWriter() {
             if (index < text.length) {
                 streamText.textContent += text.charAt(index);
                 index++;
-                setTimeout(typeWriter, 100); // Adjust speed 
+                setTimeout(typeWriter, 100);
             }
         }
         
-        // Start animation after a short delay
-        setTimeout(typeWriter, 500);
+        setTimeout(typeWriter, 800);
 
-        // Fade Up Animation for Sections
+        // Intersection Observer for fade-up sections with staggered children
         const fadeUpSections = document.querySelectorAll('.fade-up-section');
         
         const observerOptions = {
@@ -431,6 +571,12 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    
+                    const staggerItems = entry.target.querySelectorAll('.timeline-item, .skill-category, .project-card');
+                    staggerItems.forEach((item, i) => {
+                        item.style.transitionDelay = `${i * 0.1}s`;
+                        item.classList.add('stagger-visible');
+                    });
                 }
             });
         }, observerOptions);
@@ -446,63 +592,28 @@
         const chatbotIframe = document.getElementById('chatbotIframe');
         const chatbotError = document.getElementById('chatbotError');
 
-        // Check if chatbot URL is valid
         const chatbotUrl = chatbotIframe.getAttribute('src');
         const isValidUrl = chatbotUrl && 
                           chatbotUrl.trim() !== '' && 
                           !chatbotUrl.includes('YOUR-GRADIO-APP-URL') &&
                           (chatbotUrl.startsWith('http://') || chatbotUrl.startsWith('https://'));
 
-        // If URL is empty or invalid, show error immediately
         if (!isValidUrl) {
             chatbotError.classList.add('show');
         } else {
-            // Check if iframe loads successfully
             let iframeLoaded = false;
-            
-            chatbotIframe.addEventListener('load', () => {
-                iframeLoaded = true;
-            });
-
-            chatbotIframe.addEventListener('error', () => {
-                chatbotError.classList.add('show');
-            });
-
-            // Timeout check: if iframe doesn't load in 8 seconds, show error
-            setTimeout(() => {
-                if (!iframeLoaded) {
-                    chatbotError.classList.add('show');
-                }
-            }, 8000);
+            chatbotIframe.addEventListener('load', () => { iframeLoaded = true; });
+            chatbotIframe.addEventListener('error', () => { chatbotError.classList.add('show'); });
+            setTimeout(() => { if (!iframeLoaded) chatbotError.classList.add('show'); }, 8000);
         }
 
-        chatbotButton.addEventListener('click', () => {
-            chatbotPopup.classList.toggle('active');
-        });
+        chatbotButton.addEventListener('click', () => { chatbotPopup.classList.toggle('active'); });
+        closeChatbot.addEventListener('click', () => { chatbotPopup.classList.remove('active'); });
 
-        closeChatbot.addEventListener('click', () => {
-            chatbotPopup.classList.remove('active');
-        });
-
-        // Close chatbot when clicking outside
         document.addEventListener('click', (e) => {
             if (!chatbotPopup.contains(e.target) && !chatbotButton.contains(e.target)) {
                 chatbotPopup.classList.remove('active');
             }
-        });
-
-        // Theme Toggle
-        const themeToggle = document.getElementById('themeToggle');
-        const html = document.documentElement;
-        
-        // Check for saved theme preference or default to light
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        html.setAttribute('data-theme', currentTheme);
-        
-        themeToggle.addEventListener('click', () => {
-            const newTheme = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
         });
 
         // Mobile Menu Toggle
@@ -511,6 +622,7 @@
         
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
         });
 
         // Navbar scroll effect
@@ -530,15 +642,12 @@
         
         window.addEventListener('scroll', () => {
             let current = '';
-            
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
                 if (window.scrollY >= sectionTop - 100) {
                     current = section.getAttribute('id');
                 }
             });
-            
             navItems.forEach(item => {
                 item.classList.remove('active');
                 if (item.getAttribute('href').slice(1) === current) {
@@ -551,6 +660,7 @@
         navItems.forEach(item => {
             item.addEventListener('click', () => {
                 navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
             });
         });
 
@@ -560,11 +670,29 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
+            });
+        });
+
+        // Magnetic effect on project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Skill tag hover ripple
+        document.querySelectorAll('.skill-tag').forEach(tag => {
+            tag.addEventListener('mouseover', () => {
+                tag.style.transform = `translateY(-2px) scale(1.05)`;
+            });
+            tag.addEventListener('mouseout', () => {
+                tag.style.transform = '';
             });
         });
     </script>
