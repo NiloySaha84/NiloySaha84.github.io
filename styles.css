@@ -811,6 +811,49 @@ nav.scrolled {
     background: transparent;
     border: none;
     cursor: pointer;
+    position: relative;
+}
+
+.demo-video-trigger::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(8px) scale(0.9);
+    transform-origin: bottom center;
+    opacity: 0;
+    pointer-events: none;
+    background: var(--bg-secondary);
+    color: var(--accent);
+    border: 1px solid var(--accent-tint);
+    border-radius: 6px;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.4px;
+    padding: 0.25rem 0.5rem;
+    white-space: nowrap;
+    box-shadow: 0 8px 24px var(--navy-shadow);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.demo-video-trigger::before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 4px);
+    left: 50%;
+    transform: translateX(-50%) translateY(6px);
+    opacity: 0;
+    pointer-events: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid var(--accent-tint);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.demo-video-trigger:hover::after,
+.demo-video-trigger:hover::before {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
 }
 
 .project-title {
