@@ -807,6 +807,12 @@ nav.scrolled {
     transform: translateY(-2px);
 }
 
+.demo-video-trigger {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 .project-title {
     color: var(--text-primary);
     font-size: 1.15rem;
@@ -1133,6 +1139,69 @@ footer {
 .error-detail {
     color: var(--accent);
     font-style: italic;
+}
+
+.video-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1500;
+}
+
+.video-modal.active {
+    display: flex;
+}
+
+.video-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 12, 27, 0.8);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+.video-modal-content {
+    position: relative;
+    width: min(900px, 92vw);
+    max-height: 85vh;
+    background: var(--bg-secondary);
+    border: 1px solid var(--bg-tertiary);
+    border-radius: 12px;
+    padding: 0.75rem;
+    box-shadow: 0 20px 60px var(--navy-shadow);
+    z-index: 1;
+}
+
+.video-modal-close {
+    position: absolute;
+    top: 0.35rem;
+    right: 0.35rem;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    background: rgba(10, 25, 47, 0.8);
+    color: var(--text-primary);
+    font-size: 1.35rem;
+    line-height: 1;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.video-modal-close:hover {
+    color: var(--accent);
+    background: var(--accent-tint);
+}
+
+#myJarvisVideo {
+    width: 100%;
+    max-height: calc(85vh - 1.5rem);
+    border-radius: 8px;
+    display: block;
+    background: #000;
 }
 
 /* ==========================================
