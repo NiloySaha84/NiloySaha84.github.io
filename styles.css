@@ -868,6 +868,31 @@ nav.scrolled {
     color: var(--accent);
 }
 
+.project-award {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    background: var(--accent-tint);
+    border: 1px solid rgba(100, 255, 218, 0.25);
+    border-radius: 20px;
+    padding: 0.3rem 0.85rem;
+    margin-bottom: 0.85rem;
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.08);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.project-award:hover {
+    background: rgba(100, 255, 218, 0.2);
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.2);
+    transform: translateY(-2px);
+}
+
 .project-description {
     color: var(--text-secondary);
     font-size: 0.88rem;
