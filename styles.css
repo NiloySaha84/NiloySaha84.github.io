@@ -1164,6 +1164,41 @@ footer {
     position: relative;
 }
 
+.chatbot-loading {
+    position: absolute;
+    inset: 0;
+    background: var(--bg-primary);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 2;
+}
+
+.chatbot-loading.show {
+    display: flex;
+}
+
+.chatbot-loading p {
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+.chatbot-loading-spinner {
+    width: 36px;
+    height: 36px;
+    border: 3px solid var(--bg-tertiary);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: chatbotSpin 0.8s linear infinite;
+}
+
+@keyframes chatbotSpin {
+    to { transform: rotate(360deg); }
+}
+
 .chatbot-content iframe {
     border: none;
     width: 100%;

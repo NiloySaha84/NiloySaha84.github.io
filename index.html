@@ -545,9 +545,13 @@
             <button id="closeChatbot" class="close-chatbot">&times;</button>
         </div>
         <div class="chatbot-content">
+            <div id="chatbotLoading" class="chatbot-loading">
+                <div class="chatbot-loading-spinner"></div>
+                <p>Loading AI assistant...</p>
+            </div>
             <iframe 
                 id="chatbotIframe"
-                src="https://myportfoliobot.duckdns.org/gradio/"
+                data-src="https://myportfoliobot.duckdns.org/gradio/"
                 frameborder="0" 
                 width="100%" 
                 height="100%"
@@ -559,7 +563,8 @@
                 <p>My chatbot is currently under development and decided to take a quick nap.</p>
                 <p class="error-detail">Don't worry, it's dreaming of better responses!</p>
                 <p class="error-subtext">Check back soon or reach out via email below.</p>
-                <a href="#contact" class="btn btn-primary" style="margin-top: 1rem;">Contact Me Instead</a>
+                <a href="https://myportfoliobot.duckdns.org/gradio/" target="_blank" rel="noopener" class="btn btn-outline" style="margin-top: 0.75rem;">Open Chatbot in Browser</a>
+                <a href="#contact" class="btn btn-primary" style="margin-top: 0.75rem;">Contact Me Instead</a>
             </div>
         </div>
     </div>
@@ -672,23 +677,72 @@
         const closeChatbot = document.getElementById('closeChatbot');
         const chatbotIframe = document.getElementById('chatbotIframe');
         const chatbotError = document.getElementById('chatbotError');
+        const chatbotLoading = document.getElementById('chatbotLoading');
+        const chatbotUrl = chatbotIframe.dataset.src;
+        let chatbotLoadTimeout = null;
+        let chatbotIframeLoaded = false;
+        let chatbotIframeStarted = false;
 
-        const chatbotUrl = chatbotIframe.getAttribute('src');
-        const isValidUrl = chatbotUrl && 
-                          chatbotUrl.trim() !== '' && 
+        const isValidUrl = chatbotUrl &&
+                          chatbotUrl.trim() !== '' &&
                           !chatbotUrl.includes('YOUR-GRADIO-APP-URL') &&
                           (chatbotUrl.startsWith('http://') || chatbotUrl.startsWith('https://'));
 
-        if (!isValidUrl) {
+        const showChatbotError = () => {
+            chatbotLoading.classList.remove('show');
             chatbotError.classList.add('show');
-        } else {
-            let iframeLoaded = false;
-            chatbotIframe.addEventListener('load', () => { iframeLoaded = true; });
-            chatbotIframe.addEventListener('error', () => { chatbotError.classList.add('show'); });
-            setTimeout(() => { if (!iframeLoaded) chatbotError.classList.add('show'); }, 8000);
-        }
+        };
 
-        chatbotButton.addEventListener('click', () => { chatbotPopup.classList.toggle('active'); document.querySelector('.chatbot-button').classList.add('clicked');});
+        const hideChatbotError = () => {
+            chatbotError.classList.remove('show');
+        };
+
+        const startChatbotIframeLoad = () => {
+            if (!isValidUrl) {
+                showChatbotError();
+                return;
+            }
+
+            if (chatbotIframeStarted) {
+                return;
+            }
+
+            chatbotIframeStarted = true;
+            hideChatbotError();
+            chatbotLoading.classList.add('show');
+
+            chatbotIframe.addEventListener('load', () => {
+                chatbotIframeLoaded = true;
+                chatbotLoading.classList.remove('show');
+                hideChatbotError();
+                if (chatbotLoadTimeout) {
+                    clearTimeout(chatbotLoadTimeout);
+                }
+            }, { once: true });
+
+            chatbotIframe.addEventListener('error', () => {
+                showChatbotError();
+            }, { once: true });
+
+            chatbotLoadTimeout = setTimeout(() => {
+                if (!chatbotIframeLoaded) {
+                    showChatbotError();
+                }
+            }, 25000);
+
+            chatbotIframe.src = chatbotUrl;
+        };
+
+        chatbotButton.addEventListener('click', () => {
+            const isOpening = !chatbotPopup.classList.contains('active');
+            chatbotPopup.classList.toggle('active');
+            chatbotButton.classList.add('clicked');
+
+            if (isOpening) {
+                startChatbotIframeLoad();
+            }
+        });
+
         closeChatbot.addEventListener('click', () => { chatbotPopup.classList.remove('active'); });
 
         document.addEventListener('click', (e) => {
