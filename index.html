@@ -6,7 +6,7 @@
     <title>Niloy Saha | Software Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -90,7 +90,10 @@
                 </div>
                 <div class="about-image">
                     <div class="image-wrapper">
-                        <img src="mypic.PNG" alt="Niloy Saha">
+                        <picture>
+                            <source srcset="mypic.webp" type="image/webp">
+                            <img src="mypic.jpg" alt="Niloy Saha" width="280" height="280" loading="lazy" decoding="async">
+                        </picture>
                         <div class="image-border"></div>
                     </div>
                 </div>
@@ -600,9 +603,8 @@
         <div class="video-modal-backdrop"></div>
         <div class="video-modal-content" role="dialog" aria-label="MyJarvis demo video">
             <button id="closeMyJarvisDemo" class="video-modal-close" aria-label="Close demo video" type="button">&times;</button>
-            <video id="myJarvisVideo" controls preload="metadata">
+            <video id="myJarvisVideo" controls preload="none" playsinline>
                 <source src="myJarvis.mp4" type="video/mp4">
-                <source src="myJarvis.mov" type="video/quicktime">
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -613,23 +615,14 @@
         <div class="video-modal-backdrop"></div>
         <div class="video-modal-content" role="dialog" aria-label="Dragon Slayer demo video">
             <button id="closeDragonSlayerDemo" class="video-modal-close" aria-label="Close Dragon Slayer demo video" type="button">&times;</button>
-            <video id="dragonSlayerVideo" controls preload="metadata">
+            <video id="dragonSlayerVideo" controls preload="none" playsinline>
                 <source src="dragonSlayer.mp4" type="video/mp4">
-                <source src="dragonSlayer.mov" type="video/quicktime">
                 Your browser does not support the video tag.
             </video>
         </div>
     </div>
 
     <script>
-        // Scroll Progress Bar
-        window.addEventListener('scroll', () => {
-            const scrollTop = document.documentElement.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-            const progress = (scrollTop / scrollHeight) * 100;
-            document.getElementById('scrollProgress').style.width = progress + '%';
-        });
-
         // Streaming text animation
         const streamText = document.querySelector('.stream-text');
         const text = "Niloy Saha.";
@@ -816,36 +809,65 @@
             menuToggle.classList.toggle('active');
         });
 
-        // Navbar scroll effect
+        // Scroll-driven UI: progress bar, navbar state, active nav link
+        const scrollProgress = document.getElementById('scrollProgress');
         const navbar = document.getElementById('navbar');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Active nav link on scroll
         const sections = document.querySelectorAll('section');
         const navItems = document.querySelectorAll('.nav-link');
-        
-        window.addEventListener('scroll', () => {
+
+        // Offsets are cached so the scroll handler never forces a layout reflow
+        let sectionOffsets = [];
+        let activeNavId = '';
+        let navScrolled = false;
+        let scrollTicking = false;
+
+        const measureSections = () => {
+            sectionOffsets = Array.from(sections).map(section => ({
+                id: section.getAttribute('id'),
+                top: section.offsetTop
+            }));
+        };
+
+        const updateOnScroll = () => {
+            const scrollY = window.scrollY;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            scrollProgress.style.width = (scrollHeight > 0 ? (scrollY / scrollHeight) * 100 : 0) + '%';
+
+            const shouldBeScrolled = scrollY > 50;
+            if (shouldBeScrolled !== navScrolled) {
+                navScrolled = shouldBeScrolled;
+                navbar.classList.toggle('scrolled', shouldBeScrolled);
+            }
+
             let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (window.scrollY >= sectionTop - 100) {
-                    current = section.getAttribute('id');
+            for (const section of sectionOffsets) {
+                if (scrollY >= section.top - 100) {
+                    current = section.id;
                 }
-            });
-            navItems.forEach(item => {
-                item.classList.remove('active');
-                if (item.getAttribute('href').slice(1) === current) {
-                    item.classList.add('active');
-                }
-            });
-        });
+            }
+
+            if (current !== activeNavId) {
+                activeNavId = current;
+                navItems.forEach(item => {
+                    item.classList.toggle('active', item.getAttribute('href').slice(1) === current);
+                });
+            }
+
+            scrollTicking = false;
+        };
+
+        measureSections();
+        updateOnScroll();
+
+        window.addEventListener('scroll', () => {
+            if (!scrollTicking) {
+                scrollTicking = true;
+                requestAnimationFrame(updateOnScroll);
+            }
+        }, { passive: true });
+
+        window.addEventListener('resize', measureSections, { passive: true });
+        window.addEventListener('load', measureSections);
 
         // Close mobile menu when clicking on a link
         navItems.forEach(item => {
@@ -866,26 +888,27 @@
             });
         });
 
-        // Magnetic effect on project cards
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
+        // Pointer-driven flourishes are skipped on touch devices, where they only cost work
+        if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                });
             });
-        });
 
-        // Skill tag hover ripple
-        document.querySelectorAll('.skill-tag').forEach(tag => {
-            tag.addEventListener('mouseover', () => {
-                tag.style.transform = `translateY(-2px) scale(1.05)`;
+            document.querySelectorAll('.skill-tag').forEach(tag => {
+                tag.addEventListener('mouseover', () => {
+                    tag.style.transform = `translateY(-2px) scale(1.05)`;
+                });
+                tag.addEventListener('mouseout', () => {
+                    tag.style.transform = '';
+                });
             });
-            tag.addEventListener('mouseout', () => {
-                tag.style.transform = '';
-            });
-        });
+        }
     </script>
 </body>
 </html>
